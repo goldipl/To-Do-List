@@ -37,6 +37,7 @@ form.actionForm input {
 
 form.actionForm input:hover,
 form.actionForm input:focus {
+    outline: none;
     border: 2px solid #1e921a;
 }
 
