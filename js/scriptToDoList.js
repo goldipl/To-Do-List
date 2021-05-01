@@ -16,7 +16,7 @@ const addTask = (e) => {
     e.preventDefault() // prevent preloading page
     const mainTask = input.value;
     if (mainTask === "") {
-        return;
+        return alert("Wpisz coś!");
     } else {
         const liTask = document.createElement('li');
         liTask.className = 'liTask';
