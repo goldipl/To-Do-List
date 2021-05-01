@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    margin: 0 16px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 24px;
+}
+
+form.actionForm {
+    display: flex;
+    justify-content: center;
+}
+
+form.actionForm input {
+    border: 2px solid #a09898;
+    border-radius: 8px;
+    height: 32px;
+    width: 180px;
+}
+
+form.actionForm input:hover,
+form.actionForm input:focus {
+    border: 2px solid #1e921a;
+}
+
+.btn {
+    height: 32px;
+    margin-left: 8px;
+    border-radius: 8px;
+    padding: 4px 16px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 180px;
+}
+
+.btn:hover {
+    font-weight: bold;
+    background-color: #1e921a;
+    color: #ffffff;
+}
+
+ul li {
+    margin: 4px;
+}
+
+.deleteBtn {
+    margin-left: 8px;
+    border-radius: 8px;
+    padding: 4px 16px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 100px;
+}
+
+.deleteBtn:hover {
+    font-weight: bold;
+    background-color: #f72222;
+    color: #ffffff;
+}
+
+.taskSection li {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    word-wrap: anywhere;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .taskSection li {
+        width: 100%;
+    }
+}
