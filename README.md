@@ -14,7 +14,14 @@ Project was created with:
 * JavaScript
 
 ## Screens
+
+* desktop version   
+
 ![Screenshot](Screen01.jpg) 
+
+* mobile version   
+
+![Screenshot](Screen02.jpg)    
 
 ## Live :star2:
 https://goldipl.github.io/To-Do-List/
