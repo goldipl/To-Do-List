@@ -7,97 +7,162 @@
 body {
     font-family: 'Lato', sans-serif;
     text-align: center;
-    margin: 0 16px;
+    margin: 16px;
 }
 
-h1 {
+.openSection {
+    background: linear-gradient(45deg, #38cfc3, #737ce4);
+    background: -webkit-linear-gradient(45deg, #38cfc3, #737ce4);
+    width: 600px;
+    margin: 0 auto;
+    padding: 16px 16px 80px 16px;
+    border-radius: 8px;
+}
+
+.openSection h1 {
     font-weight: 400;
     font-size: 40px;
     line-height: 40px;
     padding: 32px;
     text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 0.2rem;
 }
 
-h2 {
-    font-size: 24px;
-    line-height: 24px;
-    padding: 24px;
-    font-weight: 300;
-}
-
-form.actionForm {
+.openSection form.actionForm {
     display: flex;
     justify-content: center;
 }
 
-form.actionForm input {
-    border: 2px solid #888888;
+.openSection form.actionForm input {
+    border: 2px solid #FFFFFF;
     border-radius: 4px;
     height: 32px;
     width: 180px;
+    padding-left: 4px;
 }
 
-form.actionForm input:hover,
-form.actionForm input:focus {
+.openSection form.actionForm input:hover,
+.openSection form.actionForm input:focus {
     outline: none;
-    border: 2px solid #1e921a;
+    border: 1px solid #38cfc3;
 }
 
-.btn {
+.openSection .btn {
     height: 32px;
     margin-left: 8px;
     border-radius: 4px;
     padding: 4px 16px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #FFFFFF;
     width: 180px;
-    border: 2px solid #888888;
+    border: 1px solid #FFFFFF;
+    letter-spacing: 0.1rem;
+    transition: 0.6s;
 }
 
-.btn:hover {
+.openSection .btn:hover {
     font-weight: 600;
-    background-color: #1e921a;
+    background-color: #38cfc3;
     color: #ffffff;
 }
 
-ul li {
+.taskSection {
+    position: absolute;
+    top: 188px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    width: 500px;
+    border-radius: 12px;
+    padding: 8px 8px 16px 8px;
+    -webkit-box-shadow: 12px 12px 17px -18px rgb(140 142 167);
+    -moz-box-shadow: 12px 12px 17px -18px rgb(140 142 167);
+    box-shadow: 12px 12px 17px -18px rgb(140 142 167);
+}
+
+.taskSection h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 24px;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.taskSection ul li {
     margin: 4px;
 }
 
-.deleteBtn {
-    margin-left: 8px;
-    border-radius: 8px;
-    padding: 4px 16px;
-    cursor: pointer;
-    background-color: #fff;
+.taskSection .deleteBtn {
+    background-color: #FFFFFF;
+    width: 180px;
+    border: 1px solid #FFFFFF;
+    letter-spacing: 0.1rem;
+    transition: 0.6s;
     width: 100px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px;
+    -webkit-box-shadow: 8px 5px 22px -8px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 5px 22px -8px rgba(66, 68, 90, 1);
+    box-shadow: 8px 5px 22px -8px rgba(66, 68, 90, 1);
 }
 
-.deleteBtn:hover {
+.taskSection .deleteBtn:hover {
     font-weight: 600;
     background-color: #f72222;
     color: #ffffff;
+    border: 1px solid #f72222;
 }
 
 .taskSection li {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 480px;
     margin: 0 auto;
     flex-wrap: wrap;
     word-wrap: anywhere;
     text-align: left;
+    padding-left: 12px;
 }
 
-@media (max-width: 600px) {
+.taskSection li.liTask::before {
+    position: absolute;
+    content: '';
+    top: 30%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    display: block;
+    background-color: #38cfc3;
+    border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+    .openSection {
+        width: 90vw;
+    }
+    .openSection h1 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .taskSection {
+        width: 80vw;
+    }
+    .taskSection h2 {
+        font-size: 16px;
+        line-height: 16px;
+    }
     .taskSection li {
         width: 100%;
-    }
-    .deleteBtn {
-        height: 40px;
-    }
-    .taskSection li {
         height: 40px;
         line-height: 40px;
+    }
+    .taskSection .deleteBtn {
+        height: 40px;
+    }
+    .taskSection li.liTask::before {
+        top: 45%;
     }
 }
